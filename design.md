@@ -16,5 +16,4 @@
 > As a user, I want to store the student name and grade
 > in an array.
 
-
 ## 3. Test 1

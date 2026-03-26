@@ -1,0 +1,24 @@
+{
+  "name": "javascript_basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "challenge_one.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gwewe/JavaScript_Basics.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Gwewe/JavaScript_Basics/issues"
+  },
+  "homepage": "https://github.com/Gwewe/JavaScript_Basics#readme",
+  "dependencies": {
+    "jest": "^30.3.0"
+  }
+}
