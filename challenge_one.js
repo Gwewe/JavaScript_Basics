@@ -1,11 +1,29 @@
-// Implement a function getHighestScoringStudent(students) 
+// Implement a function getHighestScoringStudent(students)
 // that takes an array of students and returns the highest scoring student.
 
-const student = [
-    {name: 'Alice', grade: 90},
-    {name: 'Bob', grade: 40},
-    {name: 'Charlie',grade: 70}
-]
-const getHighestScoringStudent = (student) => {
-    
-}
+const students = [
+  { name: "Alice", grade: 90 },
+  { name: "Bob", grade: 40 },
+  { name: "Charlie", grade: 70 },
+];
+const getHighestScoringStudent = (students) => {
+  let highestScoreStudent = students[0];
+  for (const student of students.slice(1)) {
+    if (student.grade >= highestScoreStudent.grade) {
+      highestScoreStudent = student;
+    }
+  }
+  return highestScoreStudent;
+};
+
+
+const getAverageScore = (students) => {
+  let total = 0;
+  for (const student of students) {
+    total = total + student.grade
+  }
+  return Math.ceil(total / students.length)
+};
+
+
+module.exports = { getHighestScoringStudent, getAverageScore };
