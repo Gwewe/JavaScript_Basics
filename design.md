@@ -10,10 +10,15 @@
 
 ## 2. User story:
 
-> As a user, I want to have a function
-> that return the highest scoring student.
+> As a user, I want to have a getHighestScoringStudent(students) function
+> that return the highest scoring student object.
 
-> As a user, I want to store the student name and grade
-> in an array.
+> As a user, I want to have a getAverageScore(students) function
+> that return the average scoring of the students
 
-## 3. Test 1
+## 3. Test
+
+```
+- Given we call `getHighestScoringStudent(students)` with an arrays of students (which include name and grade), it return the highest scoring student object
+- Given we call `getAverageScore(students)` with an arrays of students (which include name and grade), it return the average score int
+```
