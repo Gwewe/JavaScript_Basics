@@ -1,6 +1,7 @@
 const {
   getHighestScoringStudent,
   getAverageScore,
+  getPassingStudents,
 } = require("./challenge_one");
 
 // Given we call `getHighestScoringStudent(students)`
@@ -31,5 +32,16 @@ describe("Problem 2: get the average score for the students arrays", () => {
   it("return the average score as an integer", () => {
     const averageScore = getAverageScore(students);
     expect(averageScore).toStrictEqual(67);
+  });
+});
+
+// Given we call `getPassingStudents(students)` with an array object of students (wich include name and grade)
+// return an arrays of name of the passing student
+// passing student have more or equal 50 grade
+
+describe("Problem 3: get the passing student name", () => {
+  it("return array of student name", () => {
+    const passingStudent = getPassingStudents(students);
+    expect(passingStudent).toStrictEqual(["Alice", "Charlie"]);
   });
 });

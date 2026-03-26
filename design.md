@@ -1,4 +1,4 @@
-# Function Design Recipe
+# Function Design Recipe Challenge level 1
 
 ## 1. Requirements:
 
@@ -21,4 +21,30 @@
 ```
 - Given we call `getHighestScoringStudent(students)` with an arrays of students (which include name and grade), it return the highest scoring student object
 - Given we call `getAverageScore(students)` with an arrays of students (which include name and grade), it return the average score int
+```
+
+# Function Design Recipe Challenge level 2
+
+## 1. Requirements:
+
+```
+    Implement a function getPassingStudents(students) that takes an array of students
+
+    returns:
+    - an array of names of students with grades >= 50.
+    - sorts the passing students alphabetically.
+```
+
+## 2. User story:
+
+> As a user, I want to have a getPassingStudents(students) function
+> that return passing grade student name arrays
+
+## 3. Test
+
+```
+- Given we call `getPassingStudents(students)` with an array of name of passing student
+
+    ['Alice', 'Charlie']
+
 ```

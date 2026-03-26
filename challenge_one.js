@@ -16,14 +16,24 @@ const getHighestScoringStudent = (students) => {
   return highestScoreStudent;
 };
 
-
 const getAverageScore = (students) => {
   let total = 0;
   for (const student of students) {
-    total = total + student.grade
+    total = total + student.grade;
   }
-  return Math.ceil(total / students.length)
+  return Math.ceil(total / students.length);
 };
 
+const getPassingStudents = (students) => {
+  const passingStudent = students
+    .filter((student) => student.grade >= 50)
+    .map((student) => student.name)
+    .sort();
+  return passingStudent;
+};
 
-module.exports = { getHighestScoringStudent, getAverageScore };
+module.exports = {
+  getHighestScoringStudent,
+  getAverageScore,
+  getPassingStudents,
+};
