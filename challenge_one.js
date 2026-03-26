@@ -32,8 +32,26 @@ const getPassingStudents = (students) => {
   return passingStudent;
 };
 
+const analyzeGrades = (students) => {
+  const average = getAverageScore(students);
+  const highest = getHighestScoringStudent(students);
+  const passing = getPassingStudents(students);
+  const lowestScore = students
+    .filter((student) => student.grade <= 50)[0];
+  const overview = {
+    average: average,
+    highest: highest,
+    lowest: lowestScore,
+    passing: passing,
+  };
+  return overview;
+};
+
+console.log(analyzeGrades(students));
+
 module.exports = {
   getHighestScoringStudent,
   getAverageScore,
   getPassingStudents,
+  analyzeGrades,
 };
