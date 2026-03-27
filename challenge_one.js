@@ -36,8 +36,7 @@ const analyzeGrades = (students) => {
   const average = getAverageScore(students);
   const highest = getHighestScoringStudent(students);
   const passing = getPassingStudents(students);
-  const lowestScore = students
-    .filter((student) => student.grade <= 50)[0];
+  const lowestScore = students.filter((student) => student.grade <= 50)[0];
   const overview = {
     average: average,
     highest: highest,
@@ -47,11 +46,18 @@ const analyzeGrades = (students) => {
   return overview;
 };
 
-console.log(analyzeGrades(students));
+const evenNumbers = (list) => {
+  const evenList = list
+    .filter((number) => number % 2 === 0)
+    .map((number) => parseInt(number))
+    .sort((a, b) => a - b);
+  return evenList;
+};
 
 module.exports = {
   getHighestScoringStudent,
   getAverageScore,
   getPassingStudents,
   analyzeGrades,
+  evenNumbers,
 };

@@ -81,3 +81,11 @@
     }
 
 ```
+
+Given a list of number strings, return only the even elements, converted to numbers, from lowest to highest.
+
+Here is an example you could use as a test case.
+const list = ['10', '7', '4', '11', '13', '2'];
+evenNumbers(list) // => [2, 4, 10]
+
+Use the map, filter and sort functions to achieve this

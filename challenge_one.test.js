@@ -3,6 +3,7 @@ const {
   getAverageScore,
   getPassingStudents,
   analyzeGrades,
+  evenNumbers,
 } = require("./challenge_one");
 
 // Given we call `getHighestScoringStudent(students)`
@@ -51,7 +52,7 @@ describe("Problem 3: get the passing student name", () => {
 // with an array of object,
 // it returns the summary overview
 describe("Problem 4: analyze grades of students", () => {
-  it("it's return an array summary", () => {
+  it("return an array summary", () => {
     const overviewGradesStudents = analyzeGrades(students);
     expect(overviewGradesStudents).toStrictEqual({
       average: 67,
@@ -59,5 +60,18 @@ describe("Problem 4: analyze grades of students", () => {
       lowest: { name: "Bob", grade: 40 },
       passing: ["Alice", "Charlie"],
     });
+  });
+});
+
+// Given a list of number strings,
+// return only the even elements,
+// converted to numbers, from lowest to highest.
+// const list = ['10', '7', '4', '11', '13', '2'];
+// evenNumbers(list) // => [2, 4, 10]
+describe("Problem 5: get even numbers from an arrays of strings", () => {
+  it("return an array of even integer from lowest to highest.", () => {
+    const arrayStringNum = ["10", "7", "4", "11", "13", "2"];
+    const evenArrayInt = evenNumbers(arrayStringNum);
+    expect(evenArrayInt).toStrictEqual([2, 4, 10]);
   });
 });
